@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'accounts.context_processors.get_vendor'
             ],
         },
     },
@@ -124,9 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-#STATIC_ROOT = BASE_DIR /'static'
+STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    'foodOnline_main/static'
 ]
 
 #Media files configuration
@@ -140,8 +141,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #email configuration
 EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_POST = config('EMAIL_POST')
+EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Food App <mydjango.test1@gmail.com>'
+DEFAULT_FORM_EMAIL = 'Food App <mydjango.test1@gmail.com>'

@@ -9,8 +9,9 @@ from django.shortcuts import redirect, render
 from accounts.forms import UserForm
 from accounts.models import User, UserProfile
 from accounts.utils import detectUser, send_verification_email
-import vendor
+
 from vendor.forms import VendorForm
+from vendor.models import Vendor
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.exceptions import PermissionDenied
 

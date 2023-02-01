@@ -11,4 +11,5 @@
     right: 20px;
     animation-name: ahow-toast;
     animation-duration: 5s;
+    z-index: 99;
 }
