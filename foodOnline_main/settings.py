@@ -65,7 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'accounts.context_processors.get_vendor'
+                'accounts.context_processors.get_vendor',
+                'accounts.context_processors.get_google_api',
             ],
         },
     },
@@ -146,3 +147,5 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 DEFAULT_FORM_EMAIL = 'Food App <mydjango.test1@gmail.com>'
+
+GOOGLE_API_KEY = 'AIzaSyDSYPaEaf8eU6PbkPsMM1kXSbHcmYpTP5I'
